@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificar se é Estrangeiro</h1>
+    <p>Qual país voce nasceu? <input type="text" name="p" id="p"></p>
+    <input type="button" value="verificar" onclick="origem()">
+    <div id="res">Resultado de Origem!</div>
+
+    <script>
+        function origem()
+        {
+            var og = window.document.getElementById('p').value
+            var res = window.document.getElementById('res')
+            res.innerHTML = (`Voce é do país <strong>${og}</strong> <br>`)
+
+            if(og == 'brasil' || og == 'Brasil' || og == 'BRASIL')
+            {
+                res.innerHTML += 'voce é brasileiro!'
+            }else
+            {
+                res.innerHTML += 'voce é estrangeiro!'
+            }
+           
+        }
+    </script>
+</body>
+</html>
